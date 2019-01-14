@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <link href="./src/assets/logo_hb.png" type="image/x-icon" rel="shortcut icon">
+    <title>资产研发测试服务平台</title>
+    <script type="text/javascript">
+    (function(win) {
+        function initSize(){
+            var defaultScreenWidth=1920;
+            var defaultFontSize=20+'px';
+            var curScreenWidth=window.screen.width;
+            var clientWidth=window.document.documentElement.clientWidth;
+            var setFontSize=defaultFontSize;
+            if(clientWidth<defaultScreenWidth)
+            setFontSize = 20/(defaultScreenWidth / clientWidth);
+            if(setFontSize<13.4){
+                setFontSize=13.4;
+            }
+
+            window.document.documentElement.style.fontSize=setFontSize+'px';
+        }
+        initSize();
+        window.onresize=initSize;
+    })(window);
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
